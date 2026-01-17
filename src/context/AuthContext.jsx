@@ -17,7 +17,7 @@ export const AuthProvider = ({ children }) => {
     }, []);
 
     const login = async (phoneNumber, password) => {
-        const baseUrl = import.meta.env.VITE_API_URL?.replace(/\/api$/, '') || 'http://localhost:5019';
+        const baseUrl = import.meta.env.VITE_API_URL?.replace(/\/api$/, '') || 'https://prachar-sarthi-backend-fvddavfzfwfcfrfp.canadacentral-01.azurewebsites.net';
         const response = await axios.post(`${baseUrl}/api/auth/login`, { phoneNumber, password });
         const { token, adminName } = response.data;
         localStorage.setItem('token', token);

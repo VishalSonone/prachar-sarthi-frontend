@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5019/api';
+const API_URL = import.meta.env.VITE_API_URL || 'https://prachar-sarthi-backend-fvddavfzfwfcfrfp.canadacentral-01.azurewebsites.net/api';
 
 const api = axios.create({
     baseURL: API_URL,
